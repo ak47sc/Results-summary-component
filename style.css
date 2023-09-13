@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    font-family: hanken,sans-serif;
+}
+.card{
+    display: flex;
+    margin: 20vh auto;
+    height: fit-content;
+    width: 600px;
+    color: white;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2) , 0 6px 30px 20px rgba(0, 0, 0, 0.05);
+}
+.score-card{
+    width: 49%;
+    height: 25rem;
+    border-radius: 30px;
+    background:linear-gradient(180deg , hsl(252, 100%, 67%) , hsl(241, 81%, 54%)) ;
+    text-align: center;
+    display: inline-block;
+    & h5{
+        padding: 20px;
+        color: rgba(255, 255, 255, 0.792);
+        font-size: larger;
+    }
+    .score{
+        margin:0 auto;
+        width: 10rem;
+        height:  10rem;
+        border-radius: 50%;
+        background:linear-gradient(180deg, hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+        text-align: center;
+        
+        & h1{
+            padding-top: 1.5rem;
+            font-size: 70px;
+            font-weight: 700;
+        }
+        & h6{
+            color: rgba(255, 255, 255, 0.3);
+        }
+        
+    }
+    & h2{
+        padding-top: 30px;
+        font-weight: 700;
+    }
+    & p{
+        font-weight: 600;
+        font-size: 18px;
+        padding-top: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        color: rgba(255, 255, 255, 0.574);
+    }
+}
+
+.summary-card{
+    width: 50%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+    & h3{
+        color: black;
+        padding-left: 28px;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+    & :is(.reaction , .memory,.verbal,.visual){
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+        height: 3rem;
+        width: 15rem;
+        border-radius: 10px;
+        & .type{
+            display: flex;
+            align-items: center;
+            gap: 0 1rem;
+        }
+    }
+    & .marks {
+            & span:nth-child(1){
+            color: black;
+            font-weight: 700;
+        }
+            & span:nth-child(2){
+            color: rgba(0, 0, 0, 0.5);
+            font-weight: 700;
+        }
+    }
+    .reaction{
+        color: hsl(0, 100%, 67%);
+        background-color:rgba(255, 87, 87, 0.15);
+    }
+    .memory{
+        color:hsl(39, 100%, 56%);
+        background-color: hsla(39, 100%, 56%, 0.15);
+    }
+    .verbal{
+        color:hsl(166, 100%, 37%);
+        background-color: hsla(166, 100%, 37%, 0.15);
+    }
+    .visual{
+        color: hsl(234, 85%, 45%);
+        background-color:hsla(234, 85%, 45%, 0.15);
+    }
+    & button{
+        background-color: hsl(224, 30%, 27%);
+        color: white;
+        border: 0;
+        padding: 10px;
+        width: 12rem;
+        border-radius: 30px;
+        margin-top: 30px;
+    }
+}
+@font-face {
+    font-family: hanken ;
+    src: url("assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+
+@media screen and (max-width:375px) {
+    .card{
+        margin: 0;
+        display: block;
+        width: 100%;
+        border-radius: 0 0 30px 30px;
+    }
+    .summary-card{
+        width: 100%;
+    }
+    .score-card{
+        width: 100%;
+        border-radius: 0 0 30px 30px;
+    }
+}
