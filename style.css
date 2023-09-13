@@ -64,7 +64,7 @@
     justify-content: center;
     align-content: flex-start;
     & h3{
-        flex:100%
+        flex:100%;
         color: black;
         padding-left: 28px;
         margin-right: auto;
