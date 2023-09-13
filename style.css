@@ -125,7 +125,7 @@
     src: url("assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
 }
 
-@media screen and (max-width:375px) {
+@media screen and (max-width:500px) {
     .card{
         margin: 0;
         display: block;
